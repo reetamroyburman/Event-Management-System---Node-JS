@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const eventController = require("../controllers/eventController");
-const requireUser = require("../middlewares/requireUser");
+const requireUser = require("../middleware/requireUser");
 
 router.post("/create-event",requireUser, eventController.createEvent);
-// router.post("/update-event",requireUser, eventController.getEvents);
-// router.get("/delete-event/:eventname",requireUser, authController.refreshAccessTokenController);
-router.post("/view-events",requireUser, eventController.getEvents);
+router.put("/update-event/:title",requireUser, eventController.updateEvent);
+router.delete("/delete-event/:title",requireUser, eventController.deleteEvent);
+router.get("/view-events",requireUser, eventController.getEvents);
 
 module.exports = router;

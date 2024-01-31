@@ -82,6 +82,10 @@ const Event = sequelize.define('Event', {
     },
   });
 
+const Comment = sequelize.define('Comment', {
+    commentText: DataTypes.TEXT,
+  });
+
   // Hash the password before saving it to the database
   User.beforeCreate(async (user) => {
     const saltRounds = 10;
@@ -93,17 +97,19 @@ const Event = sequelize.define('Event', {
     return await bcrypt.compare(candidatePassword, this.password);
   };
 
+  // Event.belongsTo(User, { as: 'organizer' });
 
-// Define associations between models
-Event.hasMany(Ticket);
-// Event.hasMany(Comment);
-User.hasMany(Event);
-User.hasMany(Ticket);
-// User.hasMany(Comment);
-Ticket.belongsTo(User);
-Ticket.belongsTo(Event);
-// Comment.belongsTo(User);
-// Comment.belongsTo(Event);
+
+  // Define associations between models
+  Event.hasMany(Ticket);
+  Event.hasMany(Comment);
+  User.hasMany(Event);
+  User.hasMany(Ticket);
+  User.hasMany(Comment);
+  Ticket.belongsTo(User);
+  Ticket.belongsTo(Event);
+  Comment.belongsTo(User);
+  Comment.belongsTo(Event);
 
 // Synchronize the model with the database (create tables if they don't exist)
 sequelize.sync()
@@ -114,4 +120,4 @@ sequelize.sync()
     console.error('Error synchronizing the database:', err);
   });
 
-module.exports = { sequelize, User,Ticket,Event };
+module.exports = { sequelize, User, Ticket, Event,Comment};

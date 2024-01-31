@@ -34,9 +34,9 @@ const signupController = async (req, res) => {
 
 const loginController = async (req, res) => {
     try {
-        const { username,email, password } = req.body;
+        const {email, password } = req.body;
 
-        if (!username|| !email || !password) {
+        if (!email || !password) {
             return res.status(400).send("All fields are required");
             // return res.send(error(400, "All fields are required"));
         }
@@ -55,7 +55,7 @@ const loginController = async (req, res) => {
         }
 
         const accessToken = generateAccessToken({
-            _id: user._id,
+            _id: user.id,
         });
 
         res.cookie("jwt", accessToken, {
