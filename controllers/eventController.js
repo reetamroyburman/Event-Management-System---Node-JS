@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { sequelize,Event } = require('../models/model');
-
+const { Op } = require('sequelize');
 
 const createEvent = async (req,res) =>{
       const { title, description, date, time, location } = req.body;
@@ -109,9 +109,38 @@ const deleteEvent = async (req, res) => {
   }
 };
 
+const getEventsbyQuery = async (req,res) =>{
+  try {
+    const { title, date, location } = req.query;
+
+    const searchCriteria = {};
+
+    if (title) {
+      searchCriteria.title = { [Op.like]: `%${title}%` };
+    }
+
+    if (date) {
+      searchCriteria.date = { [Op.eq]: new Date(date) };
+    }
+
+    if (location) {
+      searchCriteria.location = { [Op.like]: `%${location}%` };
+    }
+
+    const events = await Event.findAll({
+      where: searchCriteria,
+    });
+
+    res.json(events);
+  } catch (error) {
+    
+  }
+}
+
 module.exports = {
     createEvent,
     getEvents,
     updateEvent,
-    deleteEvent
+    deleteEvent,
+    getEventsbyQuery
 };

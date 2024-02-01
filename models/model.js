@@ -53,9 +53,33 @@ const Ticket = sequelize.define('Ticket', {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    // Foreign Key for User
+  userId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'Users',
+      key: 'id',
+     },
+    },
+    // Foreign Key for Event
+  eventId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'Events',
+      key: 'id',
+    },
+  },
+
   });
 
 const Event = sequelize.define('Event', {
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -79,10 +103,15 @@ const Event = sequelize.define('Event', {
     organizer: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
+    }
   });
 
 const Comment = sequelize.define('Comment', {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    primaryKey: true,
+  },
     commentText: DataTypes.TEXT,
   });
 
