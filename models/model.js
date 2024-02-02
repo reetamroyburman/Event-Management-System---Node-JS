@@ -75,11 +75,6 @@ const Ticket = sequelize.define('Ticket', {
   });
 
 const Event = sequelize.define('Event', {
-    id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
-      primaryKey: true,
-    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -107,12 +102,25 @@ const Event = sequelize.define('Event', {
   });
 
 const Comment = sequelize.define('Comment', {
-  id: {
-    type: DataTypes.UUID,
-    defaultValue: DataTypes.UUIDV4,
-    primaryKey: true,
-  },
     commentText: DataTypes.TEXT,
+      // Foreign Key for User
+  userId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'Users',
+      key: 'id',
+     },
+    },
+      // Foreign Key for Event
+  eventId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'Events',
+      key: 'id',
+    },
+  },
   });
 
   // Hash the password before saving it to the database
