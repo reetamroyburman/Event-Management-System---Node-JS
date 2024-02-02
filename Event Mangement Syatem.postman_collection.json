@@ -1,0 +1,1795 @@
+{
+	"info": {
+		"_postman_id": "b48dbc6a-5cbd-48a0-99c0-e7be13b46596",
+		"name": "Event Mangement Syatem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31314187"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\":\"reetamrb1\",\r\n  \"email\":\"reetam1@gmail.com\",\r\n  \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/auth/signup"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\":\"reetamrb1\",\r\n  \"email\":\"reetam1@gmail.com\",\r\n  \"password\":\"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:4000/auth/signup"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-P41sXNgA473g/q4kR3x006OyeyI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 09:48:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "user created successfully"
+						}
+					]
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\":\"reetamrb1\",\r\n  \"email\":\"reetam1@gmail.com\",\r\n  \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/auth/delete/:username",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"delete",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "reetamrb3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "error response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/auth/delete/:username",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"auth",
+										"delete",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "reetam3"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-hq/hT0ORGTkTfyRpVCZ/JB/r8Eg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 10:37:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"User not found\"\n}"
+						},
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/auth/delete/:username",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"auth",
+										"delete",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "reetamrb3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-27o4zzUjhHNmthTJyia4gBCjpos\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 10:38:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"reetamrb2\",\r\n    \"newUserName\":\"reetamrb3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/auth/update-user"
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"reetamrb2\",\r\n    \"newUserName\":\"reetamrb3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:4000/auth/update-user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f-huYLvY/im903TBb+uj2hSVzkqaM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 10:14:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User profile updated successfully\",\n    \"user\": {\n        \"id\": \"03f5eec7-6619-4e54-bc1c-7e56c98314f7\",\n        \"username\": \"reetamrb3\",\n        \"email\": \"reetam1@gmail.com\",\n        \"password\": \"$2b$10$9rMe4uR.jIdx5lLB4J4Y/e0IaJxZfa5TZkeYuMi.RPMSRa.x7gPU.\",\n        \"createdAt\": \"2024-01-31T09:48:56.000Z\",\n        \"updatedAt\": \"2024-01-31T10:14:44.745Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\":\"reetamrb1\",\r\n  \"email\":\"reetam1@gmail.com\",\r\n  \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/auth/signup"
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\":\"reetamrb1\",\r\n  \"email\":\"reetam1@gmail.com\",\r\n  \"password\":\"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:4000/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDY2OTQ2MDIsImV4cCI6MTcwNjc4MTAwMn0.JJGUN2o2nrtOj2KzVAczOlVbHiXmzKMSL7d8DdhynIk; Path=/; HttpOnly; Secure"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-oubFH5v/0NSInW+rpwclsNHkDPM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 09:50:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDY2OTQ2MDIsImV4cCI6MTcwNjc4MTAwMn0.JJGUN2o2nrtOj2KzVAczOlVbHiXmzKMSL7d8DdhynIk\"\n}"
+						},
+						{
+							"name": "error response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"email\":\"reetam1@gmail.com\",\r\n  \"password\":\"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:4000/auth/login"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17-FqnJ4FuLeR/BSs6+3tdsrlnxEoQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 09:50:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "All fields are required"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "Create Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY4NjYxNjIsImV4cCI6MTcwNjk1MjU2Mn0.ss4GdEN_NMa1W6DpGBSIxPYDO8PH4vOc3aANSNKGfFU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"event 1\",\r\n    \"description\":\"desc\",\r\n    \"date\":\"01/02/2024\",\r\n    \"time\":\"08:33\",\r\n    \"location\":\"us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/event/create-event"
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"demo title 2\",\r\n    \"description\":\"demo 2\",\r\n    \"date\":\"01/02/2024\",\r\n    \"time\":\"08:33\",\r\n    \"location\":\"india\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:4000/event/create-event"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "286"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11e-2/SgxU6AL1MKRcWa9/Iqv25Sqz8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 11:58:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Event created successfully\",\n    \"event\": {\n        \"id\": 2,\n        \"title\": \"demo title 2\",\n        \"description\": \"demo 2\",\n        \"date\": \"2024-01-02\",\n        \"time\": \"08:33\",\n        \"location\": \"india\",\n        \"organizer\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n        \"updatedAt\": \"2024-01-31T11:58:05.959Z\",\n        \"createdAt\": \"2024-01-31T11:58:05.959Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3MDE2NjQsImV4cCI6MTcwNjc4ODA2NH0.utronGJiKYi3XrnxZPVmXfDG_pWc71yqm3FAxQsuie4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/event/view-events"
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:4000/event/view-events"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "518"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"206-xJCqDmOJjzHalExdgysK01C5YqQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:02:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"events\": [\n        {\n            \"id\": 1,\n            \"title\": \"demo title\",\n            \"description\": \"demo\",\n            \"date\": \"2024-01-02\",\n            \"time\": \"08:33:00\",\n            \"location\": \"india\",\n            \"organizer\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"createdAt\": \"2024-01-31T11:55:01.000Z\",\n            \"updatedAt\": \"2024-01-31T11:55:01.000Z\",\n            \"UserId\": null\n        },\n        {\n            \"id\": 2,\n            \"title\": \"demo title 2\",\n            \"description\": \"demo 2\",\n            \"date\": \"2024-01-02\",\n            \"time\": \"08:33:00\",\n            \"location\": \"india\",\n            \"organizer\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"createdAt\": \"2024-01-31T11:58:05.000Z\",\n            \"updatedAt\": \"2024-01-31T11:58:05.000Z\",\n            \"UserId\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get events by title",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3MDE2NjQsImV4cCI6MTcwNjc4ODA2NH0.utronGJiKYi3XrnxZPVmXfDG_pWc71yqm3FAxQsuie4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/event/events-by-query/search?title=demo title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"event",
+								"events-by-query",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "demo title"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:4000/event/view-events"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "518"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"206-xJCqDmOJjzHalExdgysK01C5YqQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 12:02:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"events\": [\n        {\n            \"id\": 1,\n            \"title\": \"demo title\",\n            \"description\": \"demo\",\n            \"date\": \"2024-01-02\",\n            \"time\": \"08:33:00\",\n            \"location\": \"india\",\n            \"organizer\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"createdAt\": \"2024-01-31T11:55:01.000Z\",\n            \"updatedAt\": \"2024-01-31T11:55:01.000Z\",\n            \"UserId\": null\n        },\n        {\n            \"id\": 2,\n            \"title\": \"demo title 2\",\n            \"description\": \"demo 2\",\n            \"date\": \"2024-01-02\",\n            \"time\": \"08:33:00\",\n            \"location\": \"india\",\n            \"organizer\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"createdAt\": \"2024-01-31T11:58:05.000Z\",\n            \"updatedAt\": \"2024-01-31T11:58:05.000Z\",\n            \"UserId\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3MTA5MjMsImV4cCI6MTcwNjc5NzMyM30.ExzO8euOQ1M5jIswRNRMnKfLs66WyW_ZaZYV_Hj2duw"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"demo title 3\",\r\n    \"description\":\"demo 3\",\r\n    \"date\":\"01/02/2024\",\r\n    \"time\":\"09:30\",\r\n    \"location\":\"us\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/event/update-event/:event-title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"event",
+								"update-event",
+								":event-title"
+							],
+							"variable": [
+								{
+									"key": "event-title",
+									"value": "demo title"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newTitle\":\"demo title 1\",\r\n    \"newDescription\":\"demo 1\",\r\n    \"newDate\":\"02/02/2022\",\r\n    \"newTime\":\"10:30\",\r\n    \"newLocation\":\"india\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/event/update-event/:title",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"event",
+										"update-event",
+										":title"
+									],
+									"variable": [
+										{
+											"key": "title",
+											"value": "demo%20title%203"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "307"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"133-Xzp/iSI22NTM60bTwJMDm1E03QU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 14:40:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User profile updated successfully\",\n    \"event\": {\n        \"id\": 1,\n        \"title\": \"demo title 1\",\n        \"description\": \"demo 1\",\n        \"date\": \"2022-02-02\",\n        \"time\": \"10:30\",\n        \"location\": \"india\",\n        \"organizer\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n        \"createdAt\": \"2024-01-31T11:55:01.000Z\",\n        \"updatedAt\": \"2024-01-31T14:40:49.920Z\",\n        \"UserId\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3MzMxOTUsImV4cCI6MTcwNjgxOTU5NX0.UFcZz6D8BSsJowfKXnnonBiw63zYnAl1MFSrkhgos9Q"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/event/delete-event/:title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"event",
+								"delete-event",
+								":title"
+							],
+							"variable": [
+								{
+									"key": "title",
+									"value": "demo%20title"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/event/delete-event/:title",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"event",
+										"delete-event",
+										":title"
+									],
+									"variable": [
+										{
+											"key": "title",
+											"value": "demo%20title%202"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-wRdTlJ5aU6ll9KPBiGmQileIzOM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 14:53:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Event deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "search by title",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3OTgzMjUsImV4cCI6MTcwNjg4NDcyNX0.RhA9H-QS10c4i55GCK-oqJmmHbhEQguTJHpwAymdMdw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/event/events-by-query/search?title=demo%20title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"event",
+								"events-by-query",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "demo%20title"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search by title",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/event/events-by-query/search?title=demo%20title",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"event",
+										"events-by-query",
+										"search"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "demo%20title"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "252"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fc-cO20r6VM4awjCYIl75IG4/XpDFs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 14:44:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 6,\n        \"title\": \"demo title\",\n        \"description\": \"demo\",\n        \"date\": \"2024-01-02\",\n        \"time\": \"08:33:00\",\n        \"location\": \"india\",\n        \"organizer\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n        \"createdAt\": \"2024-01-31T20:35:11.000Z\",\n        \"updatedAt\": \"2024-01-31T20:35:11.000Z\",\n        \"UserId\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "search by title Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3OTgzMjUsImV4cCI6MTcwNjg4NDcyNX0.RhA9H-QS10c4i55GCK-oqJmmHbhEQguTJHpwAymdMdw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/event/search-title/:title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"event",
+								"search-title",
+								":title"
+							],
+							"variable": [
+								{
+									"key": "title",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search by title",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/event/events-by-query/search?title=demo%20title",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"event",
+										"events-by-query",
+										"search"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "demo%20title"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "252"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fc-cO20r6VM4awjCYIl75IG4/XpDFs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 14:44:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 6,\n        \"title\": \"demo title\",\n        \"description\": \"demo\",\n        \"date\": \"2024-01-02\",\n        \"time\": \"08:33:00\",\n        \"location\": \"india\",\n        \"organizer\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n        \"createdAt\": \"2024-01-31T20:35:11.000Z\",\n        \"updatedAt\": \"2024-01-31T20:35:11.000Z\",\n        \"UserId\": null\n    }\n]"
+						},
+						{
+							"name": "search by date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/event/events-by-query/search?date=2024-01-02",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"event",
+										"events-by-query",
+										"search"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2024-01-02"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "252"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fc-cO20r6VM4awjCYIl75IG4/XpDFs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 15:00:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 6,\n        \"title\": \"demo title\",\n        \"description\": \"demo\",\n        \"date\": \"2024-01-02\",\n        \"time\": \"08:33:00\",\n        \"location\": \"india\",\n        \"organizer\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n        \"createdAt\": \"2024-01-31T20:35:11.000Z\",\n        \"updatedAt\": \"2024-01-31T20:35:11.000Z\",\n        \"UserId\": null\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "but ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY4NjYxNjIsImV4cCI6MTcwNjk1MjU2Mn0.ss4GdEN_NMa1W6DpGBSIxPYDO8PH4vOc3aANSNKGfFU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventTitle\":\"demo title 2\",\r\n    \"ticketType\":\"general\",\r\n    \"price\":\"50\",\r\n    \"quantity\":\"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/ticket/create-ticket"
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventTitle\":\"demo title\",\r\n    \"ticketType\":\"general\",\r\n    \"price\":\"250\",\r\n    \"quantity\":\"3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:4000/ticket/create-ticket"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "286"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11e-sPn9aDex4X5WPRTSEfGeGT615EY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jan 2024 20:40:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Ticket created successfully\",\n    \"ticket\": {\n        \"id\": \"ab7cfa82-1219-415b-82b9-87ed000c43d1\",\n        \"userId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n        \"eventId\": 6,\n        \"ticketType\": \"general\",\n        \"price\": \"250\",\n        \"quantity\": \"3\",\n        \"updatedAt\": \"2024-01-31T20:40:09.571Z\",\n        \"createdAt\": \"2024-01-31T20:40:09.571Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "view tickets by user id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3MzMxOTUsImV4cCI6MTcwNjgxOTU5NX0.UFcZz6D8BSsJowfKXnnonBiw63zYnAl1MFSrkhgos9Q"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/ticket/view-tickets-user"
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:4000/ticket/view-tickets-user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "597"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"255-rpv+vZM+9qH0pFEGR0vXeD/PVgY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 07:40:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"tickets\": [\n        {\n            \"id\": \"ab7cfa82-1219-415b-82b9-87ed000c43d1\",\n            \"ticketType\": \"general\",\n            \"price\": 250,\n            \"quantity\": 3,\n            \"userId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"eventId\": 6,\n            \"createdAt\": \"2024-01-31T20:40:09.000Z\",\n            \"updatedAt\": \"2024-01-31T20:40:09.000Z\",\n            \"EventId\": 6,\n            \"UserId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\"\n        },\n        {\n            \"id\": \"ac9609b5-a3ab-4c26-a7c1-562255b4b2c7\",\n            \"ticketType\": \"general\",\n            \"price\": 250,\n            \"quantity\": 2,\n            \"userId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"eventId\": 6,\n            \"createdAt\": \"2024-01-31T20:36:45.000Z\",\n            \"updatedAt\": \"2024-01-31T20:36:45.000Z\",\n            \"EventId\": 6,\n            \"UserId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "view tickets by event id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3MzMxOTUsImV4cCI6MTcwNjgxOTU5NX0.UFcZz6D8BSsJowfKXnnonBiw63zYnAl1MFSrkhgos9Q"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:4000/ticket/view-tickets-user"
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventTitle\":\"demo title\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:4000/ticket/view-tickets-event"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "597"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"255-rpv+vZM+9qH0pFEGR0vXeD/PVgY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 07:56:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"tickets\": [\n        {\n            \"id\": \"ab7cfa82-1219-415b-82b9-87ed000c43d1\",\n            \"ticketType\": \"general\",\n            \"price\": 250,\n            \"quantity\": 3,\n            \"userId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"eventId\": 6,\n            \"createdAt\": \"2024-01-31T20:40:09.000Z\",\n            \"updatedAt\": \"2024-01-31T20:40:09.000Z\",\n            \"EventId\": 6,\n            \"UserId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\"\n        },\n        {\n            \"id\": \"ac9609b5-a3ab-4c26-a7c1-562255b4b2c7\",\n            \"ticketType\": \"general\",\n            \"price\": 250,\n            \"quantity\": 2,\n            \"userId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"eventId\": 6,\n            \"createdAt\": \"2024-01-31T20:36:45.000Z\",\n            \"updatedAt\": \"2024-01-31T20:36:45.000Z\",\n            \"EventId\": 6,\n            \"UserId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "view tickets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3MzMxOTUsImV4cCI6MTcwNjgxOTU5NX0.UFcZz6D8BSsJowfKXnnonBiw63zYnAl1MFSrkhgos9Q"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/ticket/view-tickets"
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:4000/ticket/view-tickets"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "597"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"255-rpv+vZM+9qH0pFEGR0vXeD/PVgY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 07:34:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"tickets\": [\n        {\n            \"id\": \"ab7cfa82-1219-415b-82b9-87ed000c43d1\",\n            \"ticketType\": \"general\",\n            \"price\": 250,\n            \"quantity\": 3,\n            \"userId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"eventId\": 6,\n            \"createdAt\": \"2024-01-31T20:40:09.000Z\",\n            \"updatedAt\": \"2024-01-31T20:40:09.000Z\",\n            \"EventId\": 6,\n            \"UserId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\"\n        },\n        {\n            \"id\": \"ac9609b5-a3ab-4c26-a7c1-562255b4b2c7\",\n            \"ticketType\": \"general\",\n            \"price\": 250,\n            \"quantity\": 2,\n            \"userId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n            \"eventId\": 6,\n            \"createdAt\": \"2024-01-31T20:36:45.000Z\",\n            \"updatedAt\": \"2024-01-31T20:36:45.000Z\",\n            \"EventId\": 6,\n            \"UserId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3MzMxOTUsImV4cCI6MTcwNjgxOTU5NX0.UFcZz6D8BSsJowfKXnnonBiw63zYnAl1MFSrkhgos9Q"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"updateQuantity\":\"11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/ticket/update-ticket/:ticketId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"ticket",
+								"update-ticket",
+								":ticketId"
+							],
+							"variable": [
+								{
+									"key": "ticketId",
+									"value": "ab7cfa82-1219-415b-82b9-87ed000c43d1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"updateQuantity\":\"11\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/ticket/update-event/:ticketId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"ticket",
+										"update-event",
+										":ticketId"
+									],
+									"variable": [
+										{
+											"key": "ticketId",
+											"value": "ab7cfa82-1219-415b-82b9-87ed000c43d1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "353"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"161-+xxeaN68MVFqVqa1LXsE+pDSOPY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 08:35:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Ticket  updated successfully\",\n    \"updatedTicket\": {\n        \"id\": \"ab7cfa82-1219-415b-82b9-87ed000c43d1\",\n        \"ticketType\": \"general\",\n        \"price\": 250,\n        \"quantity\": \"11\",\n        \"userId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n        \"eventId\": 6,\n        \"createdAt\": \"2024-01-31T20:40:09.000Z\",\n        \"updatedAt\": \"2024-02-01T08:35:13.991Z\",\n        \"EventId\": 6,\n        \"UserId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3MzMxOTUsImV4cCI6MTcwNjgxOTU5NX0.UFcZz6D8BSsJowfKXnnonBiw63zYnAl1MFSrkhgos9Q"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/ticket/delete-ticket/:ticketid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"ticket",
+								"delete-ticket",
+								":ticketid"
+							],
+							"variable": [
+								{
+									"key": "ticketid",
+									"value": "ab7cfa82-1219-415b-82b9-87ed000c43d1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/ticket/delete-ticket/:ticketid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"ticket",
+										"delete-ticket",
+										":ticketid"
+									],
+									"variable": [
+										{
+											"key": "ticketid",
+											"value": "ab7cfa82-1219-415b-82b9-87ed000c43d1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-wRdTlJ5aU6ll9KPBiGmQileIzOM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 09:59:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Event deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "create comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY3OTgzMjUsImV4cCI6MTcwNjg4NDcyNX0.RhA9H-QS10c4i55GCK-oqJmmHbhEQguTJHpwAymdMdw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventid\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/commen/create"
+					},
+					"response": [
+						{
+							"name": "correct response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventid\":\"7\",\r\n    \"comment\":\"this is good event\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:4000/comment/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "234"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ea-Ey6SVTkZgTDZoNbXXIkII9tpll8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 09:54:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment created successfully\",\n    \"event\": {\n        \"id\": 1,\n        \"commentText\": \"this is good event\",\n        \"userId\": \"248f9a3f-825f-4fd6-839c-4289827ac38d\",\n        \"eventId\": \"7\",\n        \"updatedAt\": \"2024-02-02T09:54:25.854Z\",\n        \"createdAt\": \"2024-02-02T09:54:25.854Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIyNDhmOWEzZi04MjVmLTRmZDYtODM5Yy00Mjg5ODI3YWMzOGQiLCJpYXQiOjE3MDY4NjYxNjIsImV4cCI6MTcwNjk1MjU2Mn0.ss4GdEN_NMa1W6DpGBSIxPYDO8PH4vOc3aANSNKGfFU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/comment/create"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
